@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140112154908) do
+ActiveRecord::Schema.define(version: 20140119103308) do
+
+  create_table "events", force: true do |t|
+    t.string   "logo"
+    t.string   "title"
+    t.text     "description"
+    t.string   "address"
+    t.integer  "address_latitude"
+    t.integer  "address_longitude"
+    t.string   "event_page"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
