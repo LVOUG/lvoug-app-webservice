@@ -9,4 +9,5 @@ class Event < ActiveRecord::Base
 
   has_many :event_materials
   has_many :contacts
+  has_many :sponsors
 end
