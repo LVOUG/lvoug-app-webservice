@@ -8,4 +8,5 @@ class Event < ActiveRecord::Base
   validates :address_longitude, numericality: true, allow_nil: true
 
   has_many :event_materials
+  has_many :contacts
 end

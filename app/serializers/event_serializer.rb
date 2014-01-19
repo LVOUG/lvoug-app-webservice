@@ -4,4 +4,5 @@ class EventSerializer < ActiveModel::Serializer
              :created_at, :updated_at
 
   has_many :event_materials
+  has_many :contacts
 end
