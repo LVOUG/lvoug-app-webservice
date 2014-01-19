@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe Event do
+  context "relations" do
+    it { should have_many(:event_materials) }
+  end
+
   context "validations" do
     it { should validate_presence_of(:logo) }
     it { should validate_presence_of(:title) }
