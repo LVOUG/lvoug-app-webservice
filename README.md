@@ -25,6 +25,17 @@ rake db:migrate
 rake db:seed # Create admin account
 ```
 
+## API
+### Event list
+```bash
+$ curl http://lvoug-webservice.herokuapp.com/api/events
+```
+
+### Event
+```bash
+$ curl http://lvoug-webservice.herokuapp.com/api/events/<id>
+```
+
 ## Tests
 We use [rspec](https://github.com/rspec/rspec) and [factory girl](https://github.com/thoughtbot/factory_girl) for tests.
 
