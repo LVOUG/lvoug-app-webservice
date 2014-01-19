@@ -1,5 +1,5 @@
 # LVOUG WebService
-**Site**: (lvoug-webservice)[http://lvoug-webservice.herokuapp.com/]
+**Site**: [lvoug-webservice](http://lvoug-webservice.herokuapp.com/)
 
 ## Requirements
 **Database**: [MySQL](http://www.mysql.com/)  
