@@ -1,6 +1,6 @@
 # LVOUG WebService
 ## Requirements
-**Database**: [MySQL](http://www.mysql.com/)
+**Database**: [MySQL](http://www.mysql.com/)  
 **Ruby**: >= 2.0
 
 ## Installation
