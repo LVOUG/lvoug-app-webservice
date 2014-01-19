@@ -15,5 +15,10 @@
 /log/*.log
 /tmp
 
+# Ignore IDE project files
+/.idea
+
 
 /config/database.yml
+
+
