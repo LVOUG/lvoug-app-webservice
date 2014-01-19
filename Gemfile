@@ -33,8 +33,11 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development, :test do
+group :development do
   gem 'quiet_assets'
+end
+
+group :test do
   gem 'rspec-rails'
   gem 'mocha', :require => 'mocha/api'
   gem 'factory_girl_rails', '~> 4.0'

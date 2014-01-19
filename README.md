@@ -24,3 +24,16 @@ rake db:create
 rake db:migrate
 rake db:seed # Create admin account
 ```
+
+## Tests
+We use [rspec](https://github.com/rspec/rspec) and [factory girl](https://github.com/thoughtbot/factory_girl) for tests.
+
+Setup:
+```bash
+$ rake db:test:prepare # Setup test database
+```
+
+Run:
+```bash
+$ rspec
+```
