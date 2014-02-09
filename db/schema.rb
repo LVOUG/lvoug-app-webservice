@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209103449) do
+ActiveRecord::Schema.define(version: 20140209112554) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20140209103449) do
     t.string   "event_page"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "event_date"
   end
 
   create_table "rails_admin_histories", force: true do |t|
