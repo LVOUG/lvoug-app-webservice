@@ -36,6 +36,16 @@ $ curl http://lvoug-webservice.herokuapp.com/api/events
 $ curl http://lvoug-webservice.herokuapp.com/api/events/<id>
 ```
 
+### Articles list
+```bash
+$ curl http://lvoug-webservice.herokuapp.com/api/articles
+```
+
+### Article
+```bash
+$ curl http://lvoug-webservice.herokuapp.com/api/articles/<id>
+```
+
 ## Tests
 We use [rspec](https://github.com/rspec/rspec) and [factory girl](https://github.com/thoughtbot/factory_girl) for tests.
 
