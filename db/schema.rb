@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140119132430) do
+ActiveRecord::Schema.define(version: 20140209103449) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20140119132430) do
     t.string   "title"
     t.text     "description"
     t.string   "address"
-    t.integer  "address_latitude"
-    t.integer  "address_longitude"
+    t.float    "address_latitude"
+    t.float    "address_longitude"
     t.string   "event_page"
     t.datetime "created_at"
     t.datetime "updated_at"
