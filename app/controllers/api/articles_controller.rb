@@ -1,7 +1,12 @@
 class Api::ArticlesController < ApplicationController
 
   def index
-    render json: Article.all
+    if params[:from].present?
+      @articles = Article.where('updated_at > ?', DateTime.parse(params[:from]))
+    else
+      @articles = Article.all
+    end
+    render json: @articles
   end
 
   def show

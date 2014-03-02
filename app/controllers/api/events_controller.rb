@@ -1,7 +1,12 @@
 class Api::EventsController < ApplicationController
 
   def index
-    render json: Event.all
+    if params[:from].present?
+      @events = Event.where('updated_at > ?', DateTime.parse(params[:from]))
+    else
+      @events = Event.all
+    end
+    render json: @events
   end
 
   def show
