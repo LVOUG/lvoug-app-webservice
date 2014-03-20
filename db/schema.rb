@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209114320) do
+ActiveRecord::Schema.define(version: 20140320223250) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -26,10 +26,17 @@ ActiveRecord::Schema.define(version: 20140209114320) do
     t.string   "surname"
     t.string   "email"
     t.string   "telephone"
-    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "contacts_events", force: true do |t|
+    t.integer "event_id"
+    t.integer "contact_id"
+  end
+
+  add_index "contacts_events", ["contact_id"], name: "index_contacts_events_on_contact_id", using: :btree
+  add_index "contacts_events", ["event_id"], name: "index_contacts_events_on_event_id", using: :btree
 
   create_table "event_materials", force: true do |t|
     t.string   "title"
@@ -52,6 +59,14 @@ ActiveRecord::Schema.define(version: 20140209114320) do
     t.datetime "event_date"
   end
 
+  create_table "events_sponsors", force: true do |t|
+    t.integer "event_id"
+    t.integer "sponsor_id"
+  end
+
+  add_index "events_sponsors", ["event_id"], name: "index_events_sponsors_on_event_id", using: :btree
+  add_index "events_sponsors", ["sponsor_id"], name: "index_events_sponsors_on_sponsor_id", using: :btree
+
   create_table "rails_admin_histories", force: true do |t|
     t.text     "message"
     t.string   "username"
@@ -67,7 +82,6 @@ ActiveRecord::Schema.define(version: 20140209114320) do
 
   create_table "sponsors", force: true do |t|
     t.string   "image"
-    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"

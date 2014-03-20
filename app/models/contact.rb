@@ -4,5 +4,11 @@ class Contact < ActiveRecord::Base
   validates :email, presence: true, length: {minimum: 3, maximum: 255}
   validates :telephone, presence: true, length: {minimum: 3, maximum: 255}
 
-  belongs_to :event, touch: true
+  has_and_belongs_to_many :events
+  before_save :touch_events
+
+  private
+  def touch_events
+    events.each {|event| event.touch}
+  end
 end

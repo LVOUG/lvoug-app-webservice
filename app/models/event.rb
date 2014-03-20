@@ -9,6 +9,13 @@ class Event < ActiveRecord::Base
   validates :event_date, presence: true
 
   has_many :event_materials
-  has_many :contacts
-  has_many :sponsors
+  has_and_belongs_to_many :sponsors
+  has_and_belongs_to_many :contacts
+
+  before_save :touch_event
+
+  def touch_event
+    self.touch
+  end
+
 end
