@@ -15,7 +15,7 @@ class Event < ActiveRecord::Base
   before_save :touch_event
 
   def touch_event
-    self.touch
+    self.touch if not new_record?
   end
 
 end
